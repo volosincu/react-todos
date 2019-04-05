@@ -1,3 +1,3 @@
 export default function app () {
-    console.log("run app main function");
+    console.log("Buna! run app main function.");
 }
