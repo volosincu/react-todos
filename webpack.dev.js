@@ -1,9 +1,12 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 //loaders
 const htmlLoader = require('./webpack-modules/loaders/html.js');
 const babelLoader = require('./webpack-modules/loaders/babel.js');
+const postCssLoader = require('./webpack-modules/loaders/postcss-prod.js');
 
 
 module.exports = {
@@ -16,5 +19,13 @@ module.exports = {
         port: 9000
     },
     ...htmlLoader,
-    plugins: [ new HtmlWebPackPlugin({ template: path.resolve(__dirname, 'index.html') }) ]
+    ...postCssLoader,
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: path.resolve(__dirname, 'index.html')
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
+        })
+    ]
 };
