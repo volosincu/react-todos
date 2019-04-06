@@ -18,8 +18,13 @@ module.exports = {
         compress: true,
         port: 9000
     },
-    ...htmlLoader,
-    ...postCssLoader,
+    module: {
+        rules: [
+            {...babelLoader},
+            {...htmlLoader},
+            {...postCssLoader}
+        ]
+    },
     plugins: [
         new HtmlWebPackPlugin({
             template: path.resolve(__dirname, 'index.html')

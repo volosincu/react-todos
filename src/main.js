@@ -1,3 +1,7 @@
-import App from './app';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
-App();
+import Todos from './app';
+
+
+ReactDOM.render(<Todos />, document.getElementById('root'));

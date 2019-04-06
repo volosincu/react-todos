@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
 //loaders
 const htmlLoader = require('./webpack-modules/loaders/html.js');
 const babelLoader = require('./webpack-modules/loaders/babel.js');
@@ -16,8 +15,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    ...htmlLoader,
-    ...postCssLoader,
+    resolve: {
+        extensions: ['*', '.js', '.jsx', '.json', '.css', '.scss']
+    },
+    module: {
+        rules: [
+            {...babelLoader},
+            {...htmlLoader},
+            {...postCssLoader}
+        ]
+    },
     plugins: [
         new HtmlWebPackPlugin({
             template: path.resolve(__dirname, 'index.html')

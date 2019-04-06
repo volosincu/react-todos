@@ -1,4 +1,9 @@
 body {
     width: 100%;
     background-color: #655f5f;
+    color: #ffffff;
+}
+
+.todo-item {
+    color: green;
 }
