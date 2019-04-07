@@ -1,11 +1,14 @@
-import css from './main.css';
+import Todo from './todo';
 import React, { useState } from 'react';
 
 
+import css from './main.css';
 
-export default function Todos () {
+/**
+ * @desc Parent component to render the todo items
+ */
+function Todos () {
 
-    console.log("enter in TodoComponent");
     const [todos, setTodos] = useState([
         {
             text: 'Running',
@@ -21,17 +24,15 @@ export default function Todos () {
         }
     ]);
 
-    todos.map((todo, index) => {
-        console.log(todo.text);
-    });
-
     return (
-            <div className="todo-component">
-                <div>The todos list</div>
+            <div className="todos-component">
+                <h2 className="todos-title">The todos list</h2>
                 {todos.map((todo, index) => {
-                    return <div key={index}>{todo.text}</div>;
+                    return <Todo key={index} {...todo} />;
                 })}
                 <p>keep going!</p>
             </div>
     );
 }
+
+export default Todos;
