@@ -22,7 +22,8 @@
       "node_modules"
     ],
     "moduleNameMapper": {
-      "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+        "\\.(css)$": "<rootDir>/node_modules/jest-css-modules",
+        "components(.*)$": "<rootDir>/src/components/$1"
     }
   },
   "browserslist": [
@@ -54,6 +55,7 @@
     "jest": "^24.7.1",
     "jest-css-modules": "^2.0.0",
     "jest-enzyme": "^7.0.2",
+    "postcss-custom-properties": "^8.0.10",
     "postcss-import": "^12.0.1",
     "style-loader": "^0.23.1",
     "sugarcss": "^1.0.3",

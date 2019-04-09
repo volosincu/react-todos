@@ -16,7 +16,9 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', '.json', '.css', '.scss']
+        alias: {
+            components: path.resolve(__dirname, 'src/components')
+        }
     },
     module: {
         rules: [

@@ -1,8 +1,8 @@
-import Todo from './todo';
+import Todo from 'components/todo';
 import React, { useState } from 'react';
 
 
-import css from './main.css';
+import css from '../../main.css';
 
 /**
  * @desc Parent component to render the todo items

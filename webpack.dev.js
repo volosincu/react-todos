@@ -18,6 +18,11 @@ module.exports = {
         compress: true,
         port: 9000
     },
+    resolve: {
+        alias: {
+            components: path.resolve(__dirname, 'src/components')
+        }
+    },
     module: {
         rules: [
             {...babelLoader},

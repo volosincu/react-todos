@@ -1,9 +1,24 @@
+:root {
+    --error-color-border: #ff0000;
+    --font-color-default: #28357b;
+
+    --body-background: #e0e0e0;
+    --body-font-color: var(--font-color-default);
+
+    --todo-font-color: var(--font-color-default);
+}
+
 body {
     width: 100%;
-    background-color: #655f5f;
-    color: #ffffff;
+    color: var(--body-font-color);
+    background-color: var(--body-background);
 }
 
 .todo-item {
-    color: green;
+    color: var(--todo-font-color);
+}
+
+.fieldError {
+    outline: none;
+    border: 1px solid var(--error-color-border);
 }
