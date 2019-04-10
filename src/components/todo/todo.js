@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import TodosContext from '../context/todosContext';
+
 
 /**
  * @desc Component to render a todo item
  */
 function Todo ({text, isCompleted}) {
 
+    const todoObjectiveType = useContext(TodosContext);
     const [values, setValues] = useState({time: "", error: ""});
 
     const timeHandler = (e) => {
@@ -19,9 +22,10 @@ function Todo ({text, isCompleted}) {
     };
 
     return (
-            <div className="todo-component">
+             <div className="todo-component">
+                <div>{todoObjectiveType.type}</div>
                 {text}
-                <input className={values.error} onChange={timeHandler} type="datetime" />
+                <input name="datetime" className={values.error} onChange={timeHandler} type="datetime" />
                 <hr />
             </div>
     );
