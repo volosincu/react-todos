@@ -23,7 +23,7 @@ function Todo ({text, isCompleted}) {
 
     return (
              <div className="todo-component">
-                <div>{todoObjectiveType.type}</div>
+                <div className="selected-objective-type">{todoObjectiveType.type}</div>
                 {text}
                 <input name="datetime" className={values.error} onChange={timeHandler} type="datetime" />
                 <hr />
