@@ -15,7 +15,6 @@ test('Expect to find the corect content passed trought props rendered.', () => {
 
     const Props = { day: "1" };
 
-
     const enzyWrapper = mount(<Day {...Props} />);
     const elemQuery = enzyWrapper.find(".day-component .day");
 
@@ -23,5 +22,49 @@ test('Expect to find the corect content passed trought props rendered.', () => {
           actualDayContent = elemQuery.text();
 
     expect(actualDayContent).toEqual(expectedDay);
+
+});
+
+descrive("Test if component has the expected functionalities. ", ()=>{
+
+    it('Expect to find the add reminder button.', () => {
+        const Props = { day: "1", reminders: null };
+        const enzyWrapper = mount(<Day {...Props} />);
+        const remindersCounter = enzyWrapper.find(".day-component .reminders-add");
+
+        expect(remindersCounter).toHaveLength(1);
+    });
+});
+
+descrive("Test component behaviour when reminders are present or not. ", ()=>{
+    it('Expect to find the reminders counter.', () => {
+
+        const Props = { day: "1", reminders: [
+            { text: "clean room",
+              year: 2019,
+              month: 4,
+              day: 2,
+              hour: 10,
+              min: 33 }] };
+
+        const enzyWrapper = mount(<Day {...Props} />);
+        const remindersCounter = enzyWrapper.find(".day-component .reminders-counter");
+
+        expect(remindersCounter).toHaveLength(1);
+
+    });
+
+
+    it('Expect to find the reminders counter.', () => {
+
+        const Props = { day: "1", reminders: null };
+
+        const enzyWrapper = mount(<Day {...Props} />);
+        const remindersCounter = enzyWrapper.find(".day-component .reminders-counter");
+
+        expect(remindersCounter).toHaveLength(0);
+
+    });
+
 
 });
