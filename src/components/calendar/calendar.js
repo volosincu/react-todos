@@ -100,16 +100,15 @@ function Calendar () {
         return dayComponent;
     });
 
-
     return (
             <div className="calendar-component">
-            <h1 className="calendar-current-month">
-            <label>Month: </label>
-            <span>{monthName}</span></h1>
-            <hr />
-            <div className="calendar">
-            {days}
-            </div>
+                <h1 className="calendar-current-month">
+                <label>Month: </label>
+                <span>{monthName}</span></h1>
+                <hr />
+                <div className="calendar">
+                   {days}
+                </div>
             </div>
     );
 }

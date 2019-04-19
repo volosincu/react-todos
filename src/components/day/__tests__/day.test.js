@@ -51,9 +51,7 @@ describe("Test component behaviour when reminders are present or not. ", ()=>{
         const remindersCounter = enzyWrapper.find(".day-component .reminders-counter");
 
         expect(remindersCounter).toHaveLength(1);
-
     });
-
 
     it('Expect to find the reminders counter.', () => {
 
