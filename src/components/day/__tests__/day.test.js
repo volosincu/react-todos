@@ -13,7 +13,7 @@ test('Expect to have a valid wrapper after Day load.', () => {
 
 test('Expect to find the corect content passed trought props rendered.', () => {
 
-    const Props = { day: 1 };
+    const Props = { day: "1" };
 
 
     const enzyWrapper = mount(<Day {...Props} />);

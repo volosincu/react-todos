@@ -23,9 +23,14 @@ describe ("test Calendar component", ()=> {
     test('Expect to have the corect number of children.', () => {
 
         const enzyWrapper = mount(<Calendar />);
-        const daysInMonth = enzyWrapper.find('.calendar-day-component');
+        const daysInMonth = enzyWrapper.find('.day-component');
 
-        expect(daysInMonth).toHaveLength(31);
+        const date = new Date(),
+              m = date.getUTCMonth() + 1,
+              y = date.getUTCFullYear();
+        const size = new Date(y, m, 0).getDate();
+
+        expect(daysInMonth).toHaveLength(size);
     });
 
 });

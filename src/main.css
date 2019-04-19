@@ -13,12 +13,3 @@ body {
     color: var(--body-font-color);
     background-color: var(--body-background);
 }
-
-.todo-item {
-    color: var(--todo-font-color);
-}
-
-.fieldError {
-    outline: none;
-    border: 1px solid var(--error-color-border);
-}

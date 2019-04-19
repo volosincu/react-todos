@@ -1,8 +1,7 @@
-const LANDING_TITLT = "The todos list",
-      TODO_OBJECTIVE_PERSONAL = "Personal",
-      TODO_OBJECTIVE_PROFESIONAL = "Profesional";
+const LANDING_TITLT = "Agenda";
 
-export { LANDING_TITLT,
-         TODO_OBJECTIVE_PERSONAL,
-         TODO_OBJECTIVE_PROFESIONAL
-       };
+const MONTH_NAMES = ["", "January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"
+                   ];
+
+export { LANDING_TITLT, MONTH_NAMES };

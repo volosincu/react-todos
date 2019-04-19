@@ -1,0 +1,11 @@
+
+
+.day-component {
+    height: 300px;
+    order: 1;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    align-content: center;
+}
