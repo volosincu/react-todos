@@ -1,0 +1,165 @@
+
+
+.day-component {
+    background: tomato;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.day-component:hover {
+    box-shadow: 0px -2px 8px 3px  #ff9800;
+
+}
+
+.day-component .day {
+    top: 53px;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.day-component .reminders-counter {
+    float: right;
+    height: 29px;
+    width: 30px;
+    font-size: 1.5rem;
+    background-color: #1bd6ea;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 13px;
+}
+
+.day-component .no-reminders {
+    display: none;
+}
+
+.day-component .reminders-add {
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: wheat;
+    height: 30px;
+    width: 30px;
+    border-radius: 14px;
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.day-component .reminders-add:hover {
+    box-shadow: 0px -2px 8px 3px  #ff9800;
+}
+
+.day-component .reminder-popup {
+    font-size: 1.4rem;
+    top: -30px;
+    height: 150px;
+    width: 350px;
+    z-index: 10;
+    background-color: #6d2222;
+    opacity: 0.9;
+    display: none;
+    postion: relative;
+}
+
+
+.day-component .reminder-popup input,
+.day-component .reminder-popup button{
+    font-size: 1.4rem;
+}
+
+.day-component .reminder-popup input[type="text"] {
+    width: 90%;
+    margin : 10px;
+}
+
+.day-component .reminder-popup input[type="date"] {
+    display: block;
+    margin : 10px;
+}
+
+.day-component .reminder-popup button  {
+    float: right;
+    margin : 10px;
+    display: inline-block;
+}
+
+.day-component .show-reminders.reminder-popup-open {
+    display: block;
+}
+
+.day-component .create-reminder.reminder-popup-open {
+    display: block;
+}
+
+.day-component .show-reminders {
+    font-size: 1.3rem;
+    overflow-y: scroll;
+}
+
+.day-component .show-reminders ul {
+    margin: 3px;
+    padding: 8px;
+}
+
+.day-component .show-reminders ul li{
+    border-bottom: 1px solid #eee;
+}
+
+
+:root {
+    --error-color-border: #ff0000;
+    --font-color-default: #28357b;
+
+    --body-background: #ffffff;
+    --body-font-color: var(--font-color-default);
+
+    --todo-font-color: var(--font-color-default);
+}
+
+body {
+    width: 100%;
+    color: #28357b;
+    color: var(--body-font-color);
+    background-color: #ffffff;
+    background-color: var(--body-background);
+}
+
+.error {
+    border: 1px solid #ff0000;
+    border: 1px solid var(--error-color-border);
+}
+
+
+
+.calendar-component {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.calendar-component .calendar-current-month {
+    margin-left: 30px;
+}
+
+.calendar-component .calendar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
