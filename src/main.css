@@ -13,3 +13,7 @@ body {
     color: var(--body-font-color);
     background-color: var(--body-background);
 }
+
+.error {
+    border: 1px solid var(--error-color-border);
+}
