@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import Todos from 'components/todos';
+import Calendar from 'components/calendar';
 
 
-ReactDOM.render(<Todos />, document.getElementById('root'));
+ReactDOM.render(<Calendar />, document.getElementById('root'));
