@@ -25,7 +25,7 @@ test('Expect to find the corect content passed trought props rendered.', () => {
 
 });
 
-descrive("Test if component has the expected functionalities. ", ()=>{
+describe("Test if component has the expected functionalities. ", ()=>{
 
     it('Expect to find the add reminder button.', () => {
         const Props = { day: "1", reminders: null };
@@ -36,7 +36,7 @@ descrive("Test if component has the expected functionalities. ", ()=>{
     });
 });
 
-descrive("Test component behaviour when reminders are present or not. ", ()=>{
+describe("Test component behaviour when reminders are present or not. ", ()=>{
     it('Expect to find the reminders counter.', () => {
 
         const Props = { day: "1", reminders: [
