@@ -23,10 +23,11 @@ export default function Header () {
                <div className="header-item header-actions">
                    <label>Dark</label>
                    <input className="header-actions__theme"
-                          checked={theme == "dark"}
                           type="radio" value="dark" name="theme" onChange={changeTheme} />
                    <label>Light</label>
-                   <input className="header-actions__theme" type="radio" value="light" name="theme" onChange={changeTheme} />
+                   <input className="header-actions__theme"
+                          checked={theme == "light"}
+                          type="radio" value="light" name="theme" onChange={changeTheme} />
                </div>
           </header>;
 };

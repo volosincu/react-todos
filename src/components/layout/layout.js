@@ -25,7 +25,7 @@ function themeReducer (state, action) {
  */
 export default function Layout () {
 
-    const [ state, dispatch ] = useReducer(themeReducer, {theme: "dark"});
+    const [ state, dispatch ] = useReducer(themeReducer, {theme: "light"});
 
     const { theme } = state;
 
