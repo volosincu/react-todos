@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-import Calendar from 'components/calendar';
+import Layout from 'components/layout';
 
 
-ReactDOM.render(<Calendar />, document.getElementById('root'));
+ReactDOM.render(<Layout />, document.getElementById('root'));

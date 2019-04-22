@@ -1,16 +1,14 @@
 :root {
-    --error-color-border: #ff0000;
-    --font-color-default: #28357b;
-
     --body-background: #ffffff;
-    --body-font-color: var(--font-color-default);
+    --error-color-border: #ff0000;
 
-    --todo-font-color: var(--font-color-default);
+    --default-color: #28357b;
+    --font-color: var(--default-color);
 }
 
 body {
     width: 100%;
-    color: var(--body-font-color);
+    color: var(--font-color);
     background-color: var(--body-background);
 }
 
