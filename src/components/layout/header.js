@@ -1,5 +1,7 @@
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+
+import ThemeContext from '../context/themeContext';
 
 import headerStyle from './header.css';
 
@@ -8,13 +10,13 @@ import headerStyle from './header.css';
  */
 export default function Header () {
 
-    const [theme, setTheme] = useState('dark');
+    const { dispatch } = useContext(ThemeContext);
 
     const changeTheme = (e) => {
         const selectedTheme = e.target.value;
 
-        console.log(selectedTheme);
-        setTheme(selectedTheme);
+        dispatch({ type: "update",
+                   value: { theme: selectedTheme }});
     };
 
     return <header>
