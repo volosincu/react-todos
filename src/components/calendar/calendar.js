@@ -12,15 +12,15 @@ import { LANDING_TITLE, MONTH_NAMES } from '../constants';
 function Calendar () {
 
     const _mocks= [
-        { text: "clean room",
+        { text: "clean the room",
           year: 2019, month: 3, day: 2, hour: 10, min: 33 },
-        { text: "clean room",
+        { text: "walk the dog",
           year: 2019, month: 3, day: 2, hour: 10, min: 33 },
-        { text: "clean room",
+        { text: "buy tickets to concert",
           year: 2019, month: 3, day: 5, hour: 10, min: 33 },
-        { text: "clean room",
+        { text: "go for a run",
           year: 2019, month: 3, day: 7, hour: 10, min: 33 },
-        { text: "clean room",
+        { text: "take breakfast",
           year: 2019, month: 3, day: 17, hour: 10, min: 33 },
     ];
 

@@ -10,7 +10,7 @@ import headerStyle from './header.css';
  */
 export default function Header () {
 
-    const { dispatch } = useContext(ThemeContext);
+    const { theme, dispatch } = useContext(ThemeContext);
 
     const changeTheme = (e) => {
         const selectedTheme = e.target.value;
@@ -20,11 +20,13 @@ export default function Header () {
     };
 
     return <header>
-               <div className="header-actions">
+               <div className="header-item header-actions">
                    <label>Dark</label>
-                   <input className="header-actions__theme" type="radio" value="dark" name="theme" onChange={changeTheme} />
+                   <input className="header-actions__theme"
+                          checked={theme == "dark"}
+                          type="radio" value="dark" name="theme" onChange={changeTheme} />
                    <label>Light</label>
                    <input className="header-actions__theme" type="radio" value="light" name="theme" onChange={changeTheme} />
                </div>
           </header>;
-}
+};

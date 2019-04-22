@@ -1,12 +1,15 @@
-
+:root {
+    --day-background: tomato;
+    --day-reminder-popup-color: #607d8b;
+    --day-reminder-popup-backgd: #ffffff;
+}
 
 .day-component {
-    background: tomato;
+    background: var(--day-background);
     padding: 5px;
     width: 200px;
     height: 150px;
     margin-top: 10px;
-
     color: #ffffff;
     font-weight: bold;
     font-size: 3em;
@@ -14,7 +17,6 @@
 
 .day-component:hover {
     box-shadow: 0px -2px 8px 3px  #ff9800;
-
 }
 
 .day-component .day {
@@ -58,17 +60,17 @@
 }
 
 .day-component .reminder-popup {
-    font-size: 1.4rem;
     top: -30px;
     height: 150px;
     width: 350px;
     z-index: 10;
-    background-color: #6d2222;
     opacity: 0.9;
     display: none;
     postion: relative;
+    font-size: 1.4rem;
+    color: var(--day-reminder-popup-color);
+    background-color: var(--day-reminder-popup-backgd);
 }
-
 
 .day-component .reminder-popup input,
 .day-component .reminder-popup button{
@@ -91,10 +93,7 @@
     display: inline-block;
 }
 
-.day-component .show-reminders.reminder-popup-open {
-    display: block;
-}
-
+.day-component .show-reminders.reminder-popup-open,
 .day-component .create-reminder.reminder-popup-open {
     display: block;
 }
