@@ -108,32 +108,34 @@ function Day ({day, reminders}) {
 
     return (
             <div className="day-component">
-                <input className="reminders-add" type="button" value="+" onClick={openAddReminderHandler}></input>
-                {notification}
-                <div className="day">{day}</div><div>
-                <br/>
+                <div className="day-item day-reminders-item">{notification}</div>
+                <div className="day-item day-add-item">
+                    <input className="reminders-add" type="button" value="+" onClick={openAddReminderHandler}></input>
+                </div>
+                <div className="day-item day-number-item">{day}</div>
 
-                <div className={`reminder-popup ${create} create-reminder`}>
-                    <div className="popup-content">
-                        <input type="text" onChange={getReminderText} step="1"/>
-                        <div>{error}</div>
-                        <input id="today" disabled="disabled" type="date" step="2" value={newReminderDate} />
+                <div>
+                    <div className={`reminder-popup ${create} create-reminder`}>
+                        <div className="popup-content">
+                            <input type="text" onChange={getReminderText} step="1"/>
+                            <div>{error}</div>
+                            <input id="today" disabled="disabled" type="date" step="2" value={newReminderDate} />
 
-                        <button onClick={addReminderHandler}>Save</button>
-                        <button onClick={cancelReminderHandler}>Cancel</button>
-                    </div>
-               </div>
-
-               <div className={`reminder-popup ${show} show-reminders`}>
-                   <div className="popup-content">
-                       <button onClick={cancelReminderHandler}>Close</button>
-                       <ul>
-                           {dayReminders}
-                       </ul>
+                            <button onClick={addReminderHandler}>Save</button>
+                            <button onClick={cancelReminderHandler}>Cancel</button>
+                        </div>
                    </div>
+
+                   <div className={`reminder-popup ${show} show-reminders`}>
+                       <div className="popup-content">
+                           <button onClick={cancelReminderHandler}>Close</button>
+                           <ul>
+                               {dayReminders}
+                           </ul>
+                       </div>
+                    </div>
                 </div>
             </div>
-        </div>
     );
 };
 
