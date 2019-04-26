@@ -3,7 +3,7 @@ import React, { useState, useContext } from 'react';
 
 import ThemeContext from '../context/themeContext';
 
-import headerStyle from './header.css';
+import headerStyle from './header.scss';
 
 /**
  * @description <Header /> component

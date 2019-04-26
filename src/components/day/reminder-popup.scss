@@ -1,0 +1,54 @@
+
+.reminder-popup {
+
+    top: -30px;
+    z-index: 10;
+    opacity: 0.9;
+    width: 350px;
+    height: 150px;
+    display: none;
+    postion: relative;
+    font-size: 1.4rem;
+    color: var(--day-reminder-popup-color);
+    background-color: var(--day-reminder-popup-backgd);
+
+    input,
+    button{
+        font-size: 1.4rem;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        margin : 10px;
+    }
+
+    input[type="date"] {
+        display: block;
+        margin : 10px;
+    }
+
+    button  {
+        float: right;
+        margin : 10px;
+        display: inline-block;
+    }
+
+    &.show-reminders.reminder-popup-open,
+    &.create-reminder.reminder-popup-open {
+        display: block;
+    }
+
+    &.show-reminders {
+        font-size: 1.3rem;
+        overflow-y: scroll;
+
+        ul {
+            margin: 3px;
+            padding: 8px;
+
+            li {
+                border-bottom: 1px solid #eee;
+            }
+        }
+    }
+}

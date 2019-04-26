@@ -1,8 +1,8 @@
 import Day from 'components/day';
 import React, { useState, useEffect } from 'react';
 
-import style from '../../main.css';
-import calendarStyle from './calendar.css';
+import style from '../../main.scss';
+import calendarStyle from './calendar.scss';
 
 import { LANDING_TITLE, MONTH_NAMES } from '../constants';
 

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import dayStyle from './day.css';
+
+import dayStyle from './day.scss';
+import reminderPopupStyle from './reminder-popup.scss';
 
 /**
  * @TODO move in separate module

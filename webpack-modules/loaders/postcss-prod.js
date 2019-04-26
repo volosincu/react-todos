@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const postcssCustomProperties = require('postcss-custom-properties');
 
 module.exports = {
-    test: /\.css$/,
+    test: /\.(scss|css)$/,
     use: [
         MiniCssExtractPlugin.loader,
         'css-loader',
@@ -13,6 +13,7 @@ module.exports = {
                       /*exportTo: './dist/colors.css'*/
                   })
               ]
-          } }
+          } },
+        { loader: 'sass-loader', options: { sourceMap: true } },
     ]
 };
