@@ -1,4 +1,4 @@
-import  React, { Fragment, useState, useContext, useReducer } from 'react';
+import  React, { useReducer } from 'react';
 
 import { ThemeContext } from 'components/context';
 import Header from './header';

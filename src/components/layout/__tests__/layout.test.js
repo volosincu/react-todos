@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from 'components/layout';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe ("test Layout component", ()=> {
 
