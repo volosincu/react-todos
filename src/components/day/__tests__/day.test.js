@@ -18,7 +18,7 @@ test('Expect to find the corect content passed trought props rendered.', () => {
     const Props = { day: "1", reminders: [] };
 
     const enzyWrapper = mount(<Day {...Props} />);
-    const elemQuery = enzyWrapper.find(".day-component .day");
+    const elemQuery = enzyWrapper.find(".day-component .day-number-item");
 
     const { day: expectedDay } = Props,
           actualDayContent = elemQuery.text();

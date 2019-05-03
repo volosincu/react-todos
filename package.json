@@ -23,7 +23,7 @@
       "node_modules"
     ],
     "moduleNameMapper": {
-      "\\.(css)$": "<rootDir>/node_modules/jest-css-modules",
+      "\\.(css|scss)$": "<rootDir>/node_modules/jest-css-modules",
       "components(.*)$": "<rootDir>/src/components/$1"
     }
   },
