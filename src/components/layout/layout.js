@@ -1,43 +1,21 @@
-import  React, { useReducer } from 'react';
+import  React from 'react';
 
-import { ThemeContext } from 'components/context';
 import Header from './header';
-import Calendar from 'components/calendar';
+import mainStyle from '../../main.scss';
 
-import lightTheme from '../../light.css';
-import darkTheme from '../../dark.css';
-import mainStyle from '../../main.css';
 
 /**
- * @description reducer for theme.
- */
-function themeReducer (state, action) {
-    switch (action.type) {
-    case "update" :
-        return Object.assign({}, state, action.value);
-    default:
-        return state;
-    };
-};
-
-/**
- * @description <Layout /> component. Provides the structure of page and handle the theme
+ * @description <Layout /> component.
  */
 export default function Layout () {
 
-    const [ state, dispatch ] = useReducer(themeReducer, {theme: "light"});
-
-    const { theme } = state;
-
     return (
-            <ThemeContext.Provider value={{ theme, dispatch }}>
-                <div className={`${theme}`}>
-                    <Header />
-                    <section>
-                        <Calendar />
-                    </section>
-                    <footer></footer>
-                </div>
-            </ThemeContext.Provider>
+            <div>
+                <Header />
+                <section>
+                    { /* empty */}
+                </section>
+                <footer></footer>
+            </div>
     );
 };
