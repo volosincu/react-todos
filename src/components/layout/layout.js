@@ -6,7 +6,7 @@ import Calendar from 'components/calendar';
 
 import lightTheme from '../../light.css';
 import darkTheme from '../../dark.css';
-import mainStyle from '../../main.css';
+import mainStyle from '../../main.scss';
 
 /**
  * @description reducer for theme.
